@@ -1,0 +1,73 @@
+/* Estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #ebedef;
+  font-family: 'poppins', sans-serif;
+}
+
+body{
+  background-color: #181a1b;
+}
+
+
+.container-card{
+  .title{
+    display: flex;
+    gap: 20px;
+    color: #cec6c6;
+  }
+  #current-date{
+    color: #918f8f;
+    font-size: 0.9rem;
+    font-weight: bold;
+
+  }
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .card{
+    margin-top: 40px;
+    background-color: #0f1011;
+    width: 400px;
+    height: auto;
+    padding: 20px 40px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 1px 10px 30px 0px rgba(0,0,0,0.45);
+-webkit-box-shadow: 1px 10px 30px 0px rgba(0,0,0,0.45);
+-moz-box-shadow: 1px 10px 30px 0px rgba(0,0,0,0.45);
+
+    .coin{
+      font-family: 2rem;
+    }
+    .text{
+      color: #918f8f;
+    }
+
+    .price{
+      font-size: 4rem;
+      font-weight: bold;
+    }
+    .percent{
+      color: #918f8f;
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-style: italic;
+
+    }
+  }
+  
+  
+}
