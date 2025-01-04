@@ -4,36 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
+  <!-- icon -->
+  <link rel="icon" href="./currency.svg" type="image/x-icon">
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Sacramento&display=swap" rel="stylesheet">
   <title>CoinValue</title>
 </head>
-<body>
-  <div class="container-card">
-    <h1 class="title">coinValue </h1>
+<body >
+  
+  <div class="loader-container">
+    <div class="loader" id="loader"></div>
+
+  </div>
+  <div class="container-card" id="content" style="display: none;" > <!-- O conteúdo ficará oculto até o loader desaparecer -->
+    <h1 class="title">coinValue <img src="./currency.svg" alt=""></h1>
     <span id="current-date"></span>
 
-    <div class="card" id="euro-card">
-      <h2 class="coin">Euro</h2>
-      <p class="text">1 euro = </p>
-      <p class="price" id="euro-price">R$0.00</p>
-      <span class="percent" id="euro-percent">+0.0%</span>
+    <!-- Cartões -->
+
+    <div class="card-container" >
+      <div class="card active" id="euro-card" data-card="euro">
+        <h2 class="coin">Euro</h2>
+        <p class="text">1 euro = </p>
+        <p class="price" id="euro-price">R$0.00</p>
+        <span class="percent" id="euro-percent">+0.0%</span>
+      </div>
+      <div class="card" id="dollar-card" data-card="dollar">
+        <h2 class="coin">Dólar</h2>
+        <p class="text">1 dólar = </p>
+        <p class="price" id="dollar-price">R$0.00</p>
+        <span class="percent" id="dollar-percent">+0.0%</span>
+      </div>
+      <div class="card" id="bitcoin-card" data-card="bitcoin">
+        <h2 class="coin">Bitcoin</h2>
+        <p class="text">1 BTC = </p>
+        <p class="price" id="bitcoin-price">R$0.00</p>
+        <span class="percent" id="bitcoin-percent">+0.0%</span>
+      </div>
     </div>
-    <div class="card" id="dollar-card">
-      <h2 class="coin">Dólar</h2>
-      <p class="text">1 dolar = </p>
-      <p class="price" id="dollar-price">R$0.00</p>
-      <span class="percent" id="dollar-percent">+0.0%</span>
-    </div>
-    <div class="card" id="bitcoin-card">
-      <p class="text">1 BTC = </p>
-      <h2 class="coin">Bitcoin</h2>
-      <p class="price" id="bitcoin-price">R$0.00</p>
-      <span class="percent" id="bitcoin-percent">+0.0%</span>
-    </div>
+
+    <!-- Navegação -->
+    <nav class="card-nav">
+      <button data-target="euro">Euro</button>
+      <button data-target="dollar">Dólar</button>
+      <button data-target="bitcoin">Bitcoin </button>
+    </nav>
+
+    <footer>
+      <p>Todos os direitos reservados</p>
+      <p>made by <a href="https://github.com/rafaoshikawa" target="_blank">Rafael Oshikawa®</a></p>
+    </footer>
   </div>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="./script.js"></script>
 </body>
 </html>
