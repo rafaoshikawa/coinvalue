@@ -12,19 +12,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Sacramento&display=swap" rel="stylesheet">
   <title>CoinValue</title>
 </head>
-<body >
-  
-  <div class="loader-container">
+<body>
+  <div id="loader-container">
     <div class="loader" id="loader"></div>
-
   </div>
-  <div class="container-card" id="content" style="display: none;" > <!-- O conteúdo ficará oculto até o loader desaparecer -->
+  <div class="container-card" id="content" style="display: none;"> <!-- O conteúdo ficará oculto até o loader desaparecer -->
     <h1 class="title">coinValue <img src="./currency.svg" alt=""></h1>
     <span id="current-date"></span>
 
     <!-- Cartões -->
-
-    <div class="card-container" >
+    <div class="card-container">
       <div class="card active" id="euro-card" data-card="euro">
         <h2 class="coin">Euro</h2>
         <p class="text">1 euro = </p>
@@ -57,7 +54,7 @@
       <p>made by <a href="https://github.com/rafaoshikawa" target="_blank">Rafael Oshikawa®</a></p>
     </footer>
   </div>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
   <script src="./script.js"></script>
 </body>
 </html>

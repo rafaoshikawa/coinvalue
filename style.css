@@ -94,7 +94,8 @@ body {
   background-color: #0f1011;
   color: #ebedef;
   border: none;
-  width: 200px;
+  width: 380px;
+  font-size: 1.5rem;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
@@ -115,7 +116,7 @@ footer a {
   text-decoration: underline;
 }
 
-.loader-container {
+#loader-container {
   position: fixed; /* Fixa a posição do loader */
   top: 0; /* Alinha no topo da tela */
   left: 0; /* Alinha à esquerda */
@@ -124,7 +125,6 @@ footer a {
   display: flex; /* Usa flexbox para centralizar */
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
-  z-index: 1000; /* Garante que o loader fique acima do conteúdo */
 }
 
 

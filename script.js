@@ -1,4 +1,3 @@
-
 // Atualizar a data atual
 function updateDate() {
   const dateElement = document.getElementById('current-date');
@@ -40,19 +39,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.card');
   const buttons = document.querySelectorAll('.card-nav button');
 
+  // Função para alternar os cartões
   function switchCard(target) {
     cards.forEach(card => {
-      card.classList.remove('active');
+      card.classList.remove('active'); // Remove a classe "active" de todos os cartões
       if (card.dataset.card === target) {
-        card.classList.add('active');
+        card.classList.add('active'); // Adiciona "active" no cartão correspondente
       }
     });
   }
 
+  // Adicionar evento de clique para cada botão
   buttons.forEach(button => {
     button.addEventListener('click', () => {
       const target = button.getAttribute('data-target');
-      switchCard(target);
+      console.log(`Botão clicado: ${target}`);  // Log para depuração
+      switchCard(target);  // Chama a função para trocar os cartões
     });
   });
 
@@ -60,12 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchData();
   switchCard('euro'); // Inicia com o Euro visível
 });
-// Espera 1.5 segundos para esconder o loader e mostrar o conteúdo
+
 window.onload = () => {
   setTimeout(() => {
     // Esconde o loader
-    document.getElementById('loader').style.display = 'none';
-    
+    document.getElementById('loader-container').style.display = 'none';
+
     // Exibe o conteúdo principal
     document.getElementById('content').style.display = 'block';
 
@@ -73,3 +75,4 @@ window.onload = () => {
     fetchData();   // Buscar dados da API
   }, 1500);  // 1.5 segundos de delay
 };
+
